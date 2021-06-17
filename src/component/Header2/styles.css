@@ -1,0 +1,8 @@
+.header2 {
+    margin: 40px;
+    display: flex;
+}
+h3 {
+    color: black;
+    flex: 1;
+}
