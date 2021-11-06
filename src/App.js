@@ -1,34 +1,25 @@
-import { useEffect } from 'react';
-import './App.css';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { Button } from 'react-bootstrap';
+import "bulma/css/bulma.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ProductList from "./component/ProductList";
+import AddUser from "./component/AddUser";
+import EditUser from "./component/EditUser";
 
-import Home from './component';
-
-function App() {
-  //   useEffect(() => {
-  //     const script  = document.createElement('script');
-
-  //     script.src = "js/scripts.js";
-  //     script.async = true;
-
-  //     document.body.appendChild(script);
-
-  //     return () => {
-  //       document.body.removeChild(script);
-  //     }
-  //   })
-
+const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <ProductList />
+        </Route>
+        <Route path="/add">
+          <AddUser />
+        </Route>
+        <Route path="/edit/:id">
+          <EditUser />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
 
 export default App;
