@@ -46,7 +46,7 @@ const ProductList = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>
-                                <Link to={`/edit/${user.id}`} className="button is-small is-info" onSubmit={Delete}>Edit</Link>
+                                <Link to={`/edit/${user.id}`} className="button is-small is-info">Edit</Link>
                                 <button onClick={() => Delete(user.id)} className="button is-small is-danger">Delete</button>
                             </td>
                         </tr>
